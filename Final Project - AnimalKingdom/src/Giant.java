@@ -13,9 +13,13 @@ public class Giant extends Critter {
         if(movesCount <= 6){
             return "fee";
         }
-        else{
+        else if(movesCount <= 12){
+            if(movesCount == 12){
+                movesCount = 0;
+            }
             return "foe";
         }
+        return "";
     }
 
     public Action getMove(CritterInfo info){
